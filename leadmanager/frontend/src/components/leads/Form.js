@@ -73,8 +73,10 @@ class Form extends Component {
   }
 }
 
-// const mapDispatchToProps = dispatch => {
-//   addLead: dispatch(this.props.addLead(this.state))
-// }
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addLead: (lead) => dispatch(addLead(lead))
+  }
+}
 
-export default connect(null, { addLead })(Form);
+export default connect(null, mapDispatchToProps)(Form);
