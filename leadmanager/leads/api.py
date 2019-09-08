@@ -9,6 +9,7 @@ class LeadViewSet(viewsets.ModelViewSet):
     permission_classes = [
         permissions.IsAuthenticated
     ]
+    queryset = ''
 
     def get_query_set(self):
         return self.request.user.leads.all()
