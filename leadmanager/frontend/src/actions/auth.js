@@ -32,7 +32,7 @@ export const loadUser = () => (dispatch, getState) => {
 };
 
 // LOGIN USER
-export const login = (username, password) => (dispatch, getState) => {
+export const login = (username, password) => (dispatch) => {
   // Headers
   const config = {
     headers: {
